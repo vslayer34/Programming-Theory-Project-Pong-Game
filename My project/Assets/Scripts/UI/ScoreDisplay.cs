@@ -30,7 +30,7 @@ public class ScoreDisplay : MonoBehaviour
 
     void UpdateScore()
     {
-        playerTextField.text = playerPlatformScript.score.ToString();
-        computerTextField.text = ComputerPlatformScript.score.ToString();
+        playerTextField.text = GameManager.instance.playerScore.ToString();
+        computerTextField.text = GameManager.instance.computerScore.ToString();
     }
 }

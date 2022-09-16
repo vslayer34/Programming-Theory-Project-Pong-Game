@@ -713,6 +713,8 @@ MonoBehaviour:
   computerPlatform: {fileID: 1070017052}
   ball: {fileID: 8670324210462345852, guid: 1772f928541e77b4b97bdf4c2bc67281, type: 3}
   spawnedBall: {fileID: 0}
+  playerScore: 0
+  computerScore: 0
 --- !u!1 &874520393
 GameObject:
   m_ObjectHideFlags: 0
@@ -1043,7 +1045,7 @@ EdgeCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -8.38, y: 0.47}

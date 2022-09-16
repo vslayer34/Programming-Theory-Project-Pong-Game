@@ -9,11 +9,6 @@ public class PlayerPlatform : Platform
     private float movementY;
     
 
-    private void Start()
-    {
-        score = 0;
-    }
-
     // Update is called once per frame
     void Update()
     {

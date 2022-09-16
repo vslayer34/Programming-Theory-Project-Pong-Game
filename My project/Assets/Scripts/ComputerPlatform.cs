@@ -9,11 +9,6 @@ public class ComputerPlatform : Platform
 
     float errorMargin = 0.1f;
 
-    private void Start()
-    {
-        score = 0;
-    }
-
     // Update is called once per frame
     void Update()
     {

@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     private float offset = 0.2f;
     public GameObject spawnedBall;
 
+    public int playerScore, computerScore;
+
     private void Awake()
     {
         if (instance == null)
@@ -25,6 +27,8 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         Debug.Log("Game Manager is Active");
+        playerScore = 0;
+        computerScore = 0;
         SpawnBall();
     }
 
