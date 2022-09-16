@@ -9,10 +9,12 @@ public class ScoreBehaviour : MonoBehaviour
         if (collision.gameObject.CompareTag(Tags.playerSideTag))
         {
             GameManager.instance.computerScore++;
+            GameManager.instance.ballOutOfBounds = true;
         }
         if (collision.gameObject.CompareTag(Tags.computerSideTag))
         {
             GameManager.instance.playerScore++;
+            GameManager.instance.ballOutOfBounds = true;
         }
     }
     
