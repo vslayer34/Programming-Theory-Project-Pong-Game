@@ -7,7 +7,6 @@ public class PlayerPlatform : Platform
     [SerializeField]
     GameObject holdArea;
     private float movementY;
-    
 
     // Update is called once per frame
     void Update()

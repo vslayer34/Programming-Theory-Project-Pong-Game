@@ -715,6 +715,9 @@ MonoBehaviour:
   spawnedBall: {fileID: 0}
   playerScore: 0
   computerScore: 0
+  ballOutOfBounds: 0
+  playerLead: 0
+  computerLead: 0
 --- !u!1 &874520393
 GameObject:
   m_ObjectHideFlags: 0
@@ -1186,6 +1189,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3227172062566271513, guid: df29d0e6f0f40464697eab7622ef39d3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3227172062566271513, guid: df29d0e6f0f40464697eab7622ef39d3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3227172063212732226, guid: df29d0e6f0f40464697eab7622ef39d3, type: 3}
       propertyPath: gameManagerObject
       value: 
@@ -1200,7 +1211,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3227172063212732227, guid: df29d0e6f0f40464697eab7622ef39d3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.09
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3227172063212732227, guid: df29d0e6f0f40464697eab7622ef39d3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1294,6 +1305,10 @@ PrefabInstance:
     - target: {fileID: 6708344791639492916, guid: 7da06817fe9d16d4ebe882b69dcfb09a, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6708344792484526321, guid: 7da06817fe9d16d4ebe882b69dcfb09a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7da06817fe9d16d4ebe882b69dcfb09a, type: 3}

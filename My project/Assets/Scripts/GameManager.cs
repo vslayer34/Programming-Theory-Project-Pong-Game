@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public int playerScore, computerScore;
 
     public bool ballOutOfBounds = false;
+    public bool playerLead, computerLead;
 
     private void Awake()
     {
@@ -32,7 +33,8 @@ public class GameManager : MonoBehaviour
         Debug.Log("Game Manager is Active");
         playerScore = 0;
         computerScore = 0;
-        SpawnBall();
+        playerLead = true;
+        SpawnBall(playerPlatform);
     }
 
     private void Update()
@@ -41,18 +43,26 @@ public class GameManager : MonoBehaviour
             StartCoroutine("RestartRound");
     }
 
-    public void SpawnBall()
+    public void SpawnBall(GameObject platform)
     {
-        Vector3 spawnPos = playerPlatform.transform.GetChild(0).transform.position;
-        GameObject newBall = Instantiate(ball, new Vector3(spawnPos.x - offset, spawnPos.y), Quaternion.identity);
-        newBall.transform.SetParent(playerPlatform.transform);
+        Vector3 spawnPos = platform.transform.GetChild(0).transform.position;
+        GameObject newBall = Instantiate(ball, new Vector3(spawnPos.x, spawnPos.y), Quaternion.identity);
+        newBall.transform.SetParent(platform.transform);
         spawnedBall = newBall;
+        ballOutOfBounds = false;
+        playerLead = false;
+        computerLead = false;
     }
 
     private IEnumerator RestartRound()
     {
         yield return new WaitForSeconds(3.0f);
-        ballOutOfBounds = false;
-        SceneManager.LoadScene(0);
+        //ballOutOfBounds = false;
+        playerPlatform.transform.position = new Vector2(8.08f, 0);
+        computerPlatform.transform.position = new Vector2(-8.08f, 0);
+        if (playerLead)
+            SpawnBall(playerPlatform);
+        else if (computerLead)
+            SpawnBall(computerPlatform);
     }
 }
