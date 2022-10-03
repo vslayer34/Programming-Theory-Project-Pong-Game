@@ -14,7 +14,10 @@ public class PlayerPlatform : Platform
         Move();
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            ShootBall();
+            if (gameObject.transform.childCount <= 1)
+                Debug.Log("No ball in contact");
+            else
+                ShootBall();
         }
     }
 

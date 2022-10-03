@@ -11,12 +11,14 @@ public class ScoreBehaviour : MonoBehaviour
             GameManager.instance.computerScore++;
             GameManager.instance.ballOutOfBounds = true;
             GameManager.instance.computerLead = true;
+            Destroy(gameObject);
         }
         if (collision.gameObject.CompareTag(Tags.computerSideTag))
         {
             GameManager.instance.playerScore++;
             GameManager.instance.ballOutOfBounds = true;
             GameManager.instance.playerLead = true;
+            Destroy(gameObject);
         }
     }
     
