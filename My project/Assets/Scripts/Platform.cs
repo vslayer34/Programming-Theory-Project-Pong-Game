@@ -6,7 +6,7 @@ public class Platform : MonoBehaviour
 {
     private float posYLimit = 4.24f;
     public float speed = 10.0f;
-    private float shootForce = 50.0f;
+    private float shootForce = 20.0f;
 
     public GameObject ball;
 

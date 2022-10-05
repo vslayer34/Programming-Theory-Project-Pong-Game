@@ -14,7 +14,6 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject ball;
 
-    private float offset = 0.2f;
     public GameObject spawnedBall;
 
     public int playerScore, computerScore;
@@ -56,7 +55,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator RestartRound()
     {
-        yield return new WaitForSeconds(3.0f);
+        yield return new WaitForSeconds(2.0f);
         //ballOutOfBounds = false;
         playerPlatform.transform.position = new Vector2(8.08f, 0);
         computerPlatform.transform.position = new Vector2(-8.08f, 0);
