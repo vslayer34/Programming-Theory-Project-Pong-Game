@@ -11,6 +11,7 @@ public class ScoreDisplay : MonoBehaviour
     [SerializeField]
     GameObject playerTextGameObject, computerTextGameObject;
 
+    // ABSTRACTION
     private TextMeshProUGUI playerTextField, computerTextField;
     private PlayerPlatform playerPlatformScript;
     private ComputerPlatform ComputerPlatformScript;

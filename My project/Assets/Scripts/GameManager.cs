@@ -53,6 +53,7 @@ public class GameManager : MonoBehaviour
         computerLead = false;
     }
 
+    // ABSTRACTION
     private IEnumerator RestartRound()
     {
         yield return new WaitForSeconds(2.0f);

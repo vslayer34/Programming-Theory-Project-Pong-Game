@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public class ComputerPlatform : Platform
 {
     [SerializeField]
@@ -13,6 +14,7 @@ public class ComputerPlatform : Platform
         Move();
     }
 
+    // POLYMORPHISM
     public override void Move()
     {
         GameObject ball = GameManager.instance.spawnedBall;
